@@ -39,7 +39,7 @@ python main.py
 python main.py --agent IQL --train True 
 ~~~
 
-# We thank the authors of **PED-DQN** for open-sourcing their code and environment ([repo link](https://github.com/ddhostallero/PED-DQN)), which we used to reproduce PED-DQN results and ensure fair comparisons.
+### We thank the authors of **PED-DQN** for open-sourcing their code and environment ([repo link](https://github.com/ddhostallero/PED-DQN)), which we used to reproduce PED-DQN results and ensure fair comparisons.
 
 
 ## Code Structure
