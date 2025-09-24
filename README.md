@@ -20,17 +20,22 @@ This repository provides the implementation, experiments, and logging tools to r
 - **Comparison Baselines**: Independent Q-Learning (IQL) and PED-DQN.  
 
 
-
 ## Installation
-```bash
+~~~bash
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
 pip install -r requirements.txt
+~~~
 
-Train BEMAS
+## Usage
+
+### Train BEMAS
+~~~bash
 python main.py
+~~~
 
-
+## Code Structure
+~~~text
 BEMAS/
 ├── agents/
 │   ├── BEMAS/              # Algorithm implementation
@@ -45,4 +50,4 @@ BEMAS/
 ├── main.py
 ├── config.py
 └── make_env.py
-
+~~~
