@@ -19,45 +19,9 @@ This repository provides the implementation, experiments, and logging tools to r
 - **Phase Scheduling**: Optimism emphasized during early exploration, pessimism emphasized during later exploitation.  
 - **Comparison Baselines**: Independent Q-Learning (IQL) and PED-DQN.  
 
-
 ## Installation
-Installation
+
+```bash
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
 pip install -r requirements.txt
-
-Requirements
-
-Python 3.7+
-
-TensorFlow 2.x
-
-NumPy, OpenCV, etc.
-
-Usage
-Train BEMAS
-python main.py --agent BEMAS --scenario battery_endless --train True
-
-Train Baselines
-python main.py --agent IQL --scenario battery_endless --train True
-python main.py --agent PED-DQN --scenario battery_endless --train True
-
-Test Pre-Trained Models
-python main.py --agent BEMAS --scenario battery_endless --train False --load_nn True --nn_file path/to/model
-
-Code Structure
-BEMAS/
-├── agents/
-│   ├── BEMAS/              # Algorithm implementation
-│   ├── IQL/                # Independent Q-learning baseline
-│   ├── PED-DQN/            # Peer-evaluation baseline
-│   ├── replay_buffer.py
-│   └── config_agents.py
-├── envs/                   # Predator–prey grid environments
-│   ├── scenarios/
-│   ├── environment.py
-│   ├── grid_core.py
-│   └── config_env.py
-├── main.py
-├── config.py
-└── make_env.py
