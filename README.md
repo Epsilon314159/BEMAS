@@ -34,6 +34,15 @@ pip install -r requirements.txt
 python main.py
 ~~~
 
+### Train Baselines
+~~~bash
+python main.py --agent IQL --scenario battery_endless --train True ~~~
+
+# PED-DQN results can be reproduced using the authors' implementation:
+# https://github.com/ddhostallero/PED-DQN
+
+
+
 ## Code Structure
 ~~~text
 BEMAS/
