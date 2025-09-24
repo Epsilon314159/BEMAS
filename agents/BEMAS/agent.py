@@ -114,7 +114,7 @@ class Agent(object):
             if evaluations[i] != 0:
                 score = (1/evaluations[i]) 
             else:
-                evaluations[i] = np.power(10, -8)
+                evaluations[i] = np.power(10, 8)
                 score = (1/evaluations[i]) 
             scores.append(score)
 
