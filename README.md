@@ -26,18 +26,18 @@ This repository provides the implementation, experiments, and logging tools to r
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
 pip install -r requirements.txt
+'''
 
 ## Requirements
 
 - Python 3.7+
-- TensorFlow 2.x
-- NumPy, OpenCV, etc.
+- TensorFlow 2.x.
 
 ## Usage
 
 ### Train BEMAS
 ```bash
-python main.py 
+python main.py '''
 
 ## Code Structure
 
@@ -45,7 +45,6 @@ BEMAS/
 ├── agents/
 │   ├── BEMAS/              # Algorithm implementation
 │   ├── IQL/                # Independent Q-learning baseline
-│   ├── PED-DQN/            # Peer-evaluation baseline
 │   ├── replay_buffer.py
 │   └── config_agents.py
 ├── envs/                   # Predator–prey grid environments
