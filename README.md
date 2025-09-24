@@ -25,7 +25,7 @@ This repository provides the implementation, experiments, and logging tools to r
 ```bash
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
 
 
