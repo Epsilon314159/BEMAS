@@ -21,8 +21,7 @@ This repository provides the implementation, experiments, and logging tools to r
 
 
 ## Installation
-
-```bash
+Installation
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
 pip install -r requirements.txt
@@ -33,24 +32,25 @@ Python 3.7+
 
 TensorFlow 2.x
 
+NumPy, OpenCV, etc.
 
-## Requirements
+Usage
+Train BEMAS
+python main.py --agent BEMAS --scenario battery_endless --train True
 
-- Python 3.7+
-- TensorFlow 2.x.
+Train Baselines
+python main.py --agent IQL --scenario battery_endless --train True
+python main.py --agent PED-DQN --scenario battery_endless --train True
 
-## Usage
+Test Pre-Trained Models
+python main.py --agent BEMAS --scenario battery_endless --train False --load_nn True --nn_file path/to/model
 
-### Train BEMAS
-```bash
-python main.py 
-
-## Code Structure
-
+Code Structure
 BEMAS/
 ├── agents/
 │   ├── BEMAS/              # Algorithm implementation
 │   ├── IQL/                # Independent Q-learning baseline
+│   ├── PED-DQN/            # Peer-evaluation baseline
 │   ├── replay_buffer.py
 │   └── config_agents.py
 ├── envs/                   # Predator–prey grid environments
