@@ -19,12 +19,16 @@ This repository provides the implementation, experiments, and logging tools to r
 - **Phase Scheduling**: Optimism emphasized during early exploration, pessimism emphasized during later exploitation.  
 - **Comparison Baselines**: Independent Q-Learning (IQL) and PED-DQN.  
 
-## Installation
 
+
+## Installation
 ```bash
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
 pip install -r requirements.txt
+
+
+
 
 Train BEMAS
 python main.py
