@@ -25,3 +25,23 @@ This repository provides the implementation, experiments, and logging tools to r
 git clone https://github.com/Epsilon314159/BEMAS.git
 cd BEMAS
 pip install -r requirements.txt
+
+Train BEMAS
+python main.py
+
+
+BEMAS/
+├── agents/
+│   ├── BEMAS/              # Algorithm implementation
+│   ├── IQL/                # Independent Q-learning baseline
+│   ├── replay_buffer.py
+│   └── config_agents.py
+├── envs/                   # Predator–prey grid environments
+│   ├── scenarios/
+│   ├── environment.py
+│   ├── grid_core.py
+│   └── config_env.py
+├── main.py
+├── config.py
+└── make_env.py
+
