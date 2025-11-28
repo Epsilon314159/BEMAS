@@ -1,0 +1,90 @@
+# BEMAS configuration for StarCraft II
+# Place this in config/algs/bemas.yaml
+
+# Use BEMAS reward reshaping
+use_bemas: True
+
+# BEMAS-specific hyperparameters
+bemas_psi_opt: 0.4  # Optimism scale
+bemas_lambda_ema: 0.6  # EMA rate for scores
+bemas_alpha_min: 0.1  # Min optimism weight
+bemas_alpha_max: 1.0  # Max optimism weight
+bemas_beta_min: 0.1  # Min pessimism weight
+bemas_beta_max: 1.0  # Max pessimism weight
+bemas_t_exp_ratio: 0.5  # Exploration phase (50% of training)
+bemas_phi: 0.95  # Dirichlet forgetting factor
+bemas_omega: 1.0  # Evidence weight
+bemas_epsilon_kl: 1.0e-8  # KL numerical stability
+bemas_use_stability: False  # Use Bayesian stability
+bemas_use_zscore: False  # Use Z-score normalization for Q-values
+
+# Use BEMAS learner
+learner: "bemas_q_learner"
+
+# Controller and agent
+mac: "basic_mac"
+agent: "rnn"
+
+# Action selection
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000
+evaluation_epsilon: 0.0
+
+# Runner
+runner: "episode"
+
+# Training parameters
+batch_size: 32
+batch_size_run: 1
+buffer_size: 5000
+buffer_cpu_only: True
+
+# Learning parameters
+lr: 0.0005
+optim_alpha: 0.99
+optim_eps: 0.00001
+grad_norm_clip: 10
+
+# Q-learning
+gamma: 0.99
+target_update_interval_or_tau: 200
+double_q: True
+mixer:   # Use QMIX, or set to null for IQL
+
+# Agent network
+agent_output_type: "q"
+hidden_dim: 64
+use_rnn: True
+
+# Observations
+obs_agent_id: True
+obs_last_action: True
+
+# Reward settings
+standardise_returns: True
+standardise_rewards: True
+common_reward: True  # StarCraft uses common team reward
+
+# Training schedule
+t_max: 2000000
+test_interval: 10000
+test_nepisode: 20
+log_interval: 10000
+runner_log_interval: 10000
+learner_log_interval: 10000
+training_iters: 1
+
+# Model saving
+use_cuda: True
+use_tensorboard: True
+save_model: True
+save_model_interval: 100000
+checkpoint_path: ""
+evaluate: False
+load_step: 0
+save_replay: False
+local_results_path: "results"
+
+name: "bemas"
